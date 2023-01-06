@@ -20,7 +20,7 @@ export const AuthProvider = ({children}) => {
             method: 'POST',
             body: new URLSearchParams(
                 {
-                    'username': e.target.email.value,
+                    'username': e.target.id.value,
                     'password': e.target.password.value
                 }
             )
@@ -34,7 +34,10 @@ export const AuthProvider = ({children}) => {
             setAuthTokens(data)
             setUser(decode)
             localStorage.setItem('authTokens', JSON.stringify(data))
-            navigate(`/u/${decode.username}`)
+            if(decode.id[0] === 'H')
+                navigate(`/hospital/${decode.id}`)
+            else
+                navigate(`/staff/${decode.id}`)
         }else{
             alert(`Error: ${response.status}`)
         }

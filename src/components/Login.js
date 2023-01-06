@@ -14,11 +14,12 @@ function Login(props) {
       <hr className="solid"/>
       <div className="login-form">
         <form onSubmit={(e) => login(e)}>
-          <label htmlFor="email"><b>Email</b></label>
-          <input type="email" id="email" name="email" placeholder="example@gmail.com" required></input>
+          <label htmlFor="id"><b>ID</b></label>
+          <input type="text" id="id" name="id" placeholder="Enter your ID here" required></input>
 
           <label htmlFor="password"><b>Password</b></label>
           <input type="password" id="password" name="password" placeholder="********" required></input>
+          <p className='bottom-txt'>Don't have an account <a href = "/">Sign Up</a></p>
           <button type="submit"className='btn-login'>Login</button>
         </form>
       </div>

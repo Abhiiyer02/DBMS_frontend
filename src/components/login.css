@@ -23,7 +23,7 @@ hr.solid {
   border-top: 1px solid #bbb;
 }
 
-input[type=email], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 0.75rem 1.25rem;
   margin: 0.5rem 0;
@@ -34,8 +34,13 @@ input[type=email], input[type=password] {
   outline: none;
 }
 
-input[type=email]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus {
   border: 2px solid pink;
+}
+
+.bottom-txt{
+  text-align: center;
+  margin: 0.5rem 0;
 }
 
 .btn-login{
